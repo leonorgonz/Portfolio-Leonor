@@ -1,105 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Portfolio programado por Leonor</title>
-        <link href="" rel="icon" type="image/png"/>
-        <link rel="stylesheet" href="https://use.typekit.net/qhm8wqj.css" />
-        <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- CUSTOM css -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/lightbox.css">
-        <!-- FONTAWESOME -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- JQUERY -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- ENLACE ANIMACIÓN typed.umd.js-->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <!-- flickiti -->
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <!-- TIPOGRAFIAS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfolio - Leonor</title>
 
-    </head>
-    <body>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lightbox.css">
 
-  <!-- Overlay de construcción -->
-  <!-- <div id="overlay">
-    <p>The website is not available at the moment.</p>I’m working on something amazing... 🚧</p>
-    <p>You can contact me at my email: leonor.gonz.r@gmail.com
-  </div> -->
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
-<div class="top-buttons" style="display: flex;justify-content:flex-start;gap: 20px;margin: 0px 11px;">
-  <a href="cv.pdf" class="btn" style="/* padding: 10px 20px; */color: #000000;/* text-decoration: none; *//* border-radius: 5px; */">CV</a>
-  <a href="mailto:leonor.gonz.r@gmail.com" class="btn" style="/* padding: 10px 20px; *//* background-color: #0004ff; */color: #000000;/* text-decoration: none; *//* border-radius: 5px; */">Contact</a>
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- TIPOGRAFIAS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-buttons" style="display: flex; justify-content:flex-start; gap: 20px; margin: 0px 11px;">
+  <a href="img/CV+Portfolio.Leonor González .pdf" class="btn" style="color: #000000;">CV</a>
+  <a href="http://www.linkedin.com/in/leonor-gonz%C3%A1lez-rodr%C3%ADguez" class="btn" style="color: #000000;">Linkedin</a>
+  <a href="mailto:leonor.gonz.r@gmail.com" class="btn" style="color: #000000;">Email</a>
 </div>
 
 <section class="galeria" id="galeria">
-    <div class="foto tam-240 visible" style="top: 5%;left: 1%;">
-      <span class="fecha">2025</span>
-      <img src="img/bus laus 1.jpg" alt="Advertaisment">
-      <h3 class="titulo">Advertaisment<br><span class="sub">// Walk Away</span></h3>
-    </div>
 
-    <div class="foto tam-180 visible" style="top: 13%;left: 53.8%;">
-      <span class="fecha">2024</span>
-      <img src="img/bansky.png" alt="Foto 2">
-      <h3 class="titulo">Art Direction, Editorial<br><span class="sub">// Bansky</span></h3>
-    </div>
+  <a href="walk-away.html" class="foto tam-240 visible" style="top: 2%; left: 1%;">
+    <span class="fecha">2025</span>
+    <img src="img/bus laus 1.jpg" alt="Advertaisment">
+    <h3 class="titulo">Advertaisment<br><span class="sub">// Walk Away</span></h3>
+  </a>
 
-    <div class="foto tam-220 visible" style="top: 59%;left: 3%;">
-      <span class="fecha">2025</span>
-      <img src="img/Buky Tales.jpg" alt="Advertaisment">
-      <h3 class="titulo">Advertaisment<br><span class="sub">// Buky Tales</span></h3>
-    </div>
+  <a href="bansky.html" class="foto tam-180 visible" style="top: 13%; left: 53.8%;">
+    <span class="fecha">2024</span>
+    <img src="img/bansky.png" alt="Foto 2">
+    <h3 class="titulo">Art Direction, Editorial<br><span class="sub">// Bansky</span></h3>
+  </a>
 
-    <div class="foto tam-180 visible" style="top: 40%;left: 82.6%;">
-      <span class="fecha">2025</span>
-      <img src="img/vino.png" alt="Foto 4">
-      <h3 class="titulo">Vino<br><span class="sub">// Buky Tales</span></h3>
-    </div>
+  <a href="buky-tales.html" class="foto tam-220 visible" style="top: 57%; left: 3%;">
+    <span class="fecha">2025</span>
+    <img src="img/Buky Tales.jpg" alt="Advertaisment">
+    <h3 class="titulo">Advertaisment<br><span class="sub">// Buky Tales</span></h3>
+  </a>
 
-    <div class="foto tam-300 visible" style="top: 16%;left: 24.5%;">
-      <span class="fecha">2025</span>
-      <img src="img/Gotdem.png" alt="Foto 5">
-      <h3 class="titulo">Web design<br><span class="sub">// Gotdem</span></h3>
-    </div>
+  <a href="la-chaya.html" class="foto tam-180 visible" style="top: 38%; left: 82.6%;">
+    <span class="fecha">2025</span>
+    <img src="img/vino.png" alt="Foto 4">
+    <h3 class="titulo">Branding<br><span class="sub">// La Chaya</span></h3>
+  </a>
 
-    <div class="foto tam-290 visible" style="top: 5%;left: 71.7%;">
-      <span class="fecha">2023// 2024</span>
-      <img src="img/BES.png" alt="Foto 6">
-      <h3 class="titulo">Brand Identity, Web Design<br><span class="sub">// BES.</span></h3>
-    </div>
+  <a href="gotdem.html" class="foto tam-300 visible" style="top: 16%; left: 24.5%;">
+    <span class="fecha">2025</span>
+    <img src="img/Gotdem.png" alt="Foto 5">
+    <h3 class="titulo">Web design<br><span class="sub">// Gotdem</span></h3>
+  </a>
 
-    <div class="foto tam-300 visible" style="top: 55%;left: 53.8%;">
-      <span class="fecha">2022</span>
-      <img src="img/Skoda.png" alt="Foto 7">
-      <h3 class="titulo">Brand Identity<br><span class="sub">// Skoda</span></h3>
-    </div>
+  <a href="bes.html" class="foto tam-290 visible" style="top: 5%; left: 71.7%;">
+    <span class="fecha">2023//2024</span>
+    <img src="img/BES.png" alt="Foto 6">
+    <h3 class="titulo">Brand Identity, Web Design<br><span class="sub">// BES.</span></h3>
+  </a>
 
-    <div class="foto tam-310 visible" style="top: 64%;left: 24%;">
-      <span class="fecha">2024</span>
-      <img src="img/Mock up todos los carteles.png" alt="Foto 8">
-      <h3 class="titulo">Art Direction<br><span class="sub">// Batman</span></h3>
-    </div>
-  </section>
+  <a href="skoda.html" class="foto tam-300 visible" style="top: 55%; left: 53.8%;">
+    <span class="fecha">2022</span>
+    <img src="img/Skoda.png" alt="Foto 7">
+    <h3 class="titulo">Brand Identity<br><span class="sub">// Skoda</span></h3>
+  </a>
 
-        <!-- JAVASCRIPT BOOTSTRAP -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!-- FLIKITI -->
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <!-- JAVASCRIPT -->
-         <script src="js/script.js"></script>
-         
+  <a href="batman.html" class="foto tam-310 visible" style="top: 60%; left: 24%;">
+    <span class="fecha">2024</span>
+    <img src="img/Mock up todos los carteles.png" alt="Foto 8">
+    <h3 class="titulo">Art Direction<br><span class="sub">// Batman</span></h3>
+  </a>
 
-    </body>
+</section>
+
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
 </html>

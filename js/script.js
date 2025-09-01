@@ -15,12 +15,11 @@ function resizeMasonryGrid() {
     const fecha = item.querySelector('.fecha');
     const titulo = item.querySelector('.titulo');
 
-    // Márgenes aleatorios más pequeños para rango intermedio
     let marginTop = 0;
     let marginBottom = 0;
     if (numColumns > 1 && numColumns <= 5) {
-      marginTop = 15 + Math.floor(Math.random() * 25);   // 15 a 40px
-      marginBottom = 15 + Math.floor(Math.random() * 25); // 15 a 40px
+      marginTop = 15 + Math.floor(Math.random() * 25);
+      marginBottom = 15 + Math.floor(Math.random() * 25);
     }
 
     item.style.marginTop = `${marginTop}px`;
@@ -30,9 +29,7 @@ function resizeMasonryGrid() {
       img.getBoundingClientRect().height +
       (fecha ? fecha.getBoundingClientRect().height : 0) +
       (titulo ? titulo.getBoundingClientRect().height : 0) +
-      marginTop +
-      marginBottom +
-      5; // pequeño margen adicional
+      marginTop + marginBottom + 5;
 
     const rowSpan = Math.ceil((contentHeight + gap) / (rowHeight + gap));
     item.style.gridRowEnd = `span ${rowSpan}`;

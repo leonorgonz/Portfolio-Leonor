@@ -1,68 +1,45 @@
-@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
-
-/* ===== Reset ===== */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-:root {
-  --clr-black: #000000;
-  --clr-white: #ffffff;
-  --clr-primary: #ed6a42;
-  --clr-secondary: #0004ff;
-  --background: #f5f5f5;
-  --ff-title: "Inter", sans-serif;
-  --ff-body: "Roboto Mono", monospace;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--background);
-  font-family: var(--ff-body);
-  line-height: 1.35;
-  overflow-x: hidden;
-}
-
-/* ===== Galería Escritorio Masonry ===== */
+/* ===== Galería Masonry ===== */
 .galeria {
   position: relative;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
 }
-
 
 .foto {
   position: absolute;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease, top 0.6s ease, left 0.6s ease;
+  color: #000;
+  text-decoration: none; /* quitar subrayado por defecto */
 }
 
-
-.foto.visible {
-  opacity: 1;
-  transform: translateY(0);
+.foto.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
 .foto img {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Texto */
+.foto:hover img { 
+  transform: scale(0.98); 
+  opacity: 0.9; 
+}
+
 .fecha {
   position: absolute;
-  top: -1.3em;
+  top: -1.6em;
   left: 0;
   font-size: 0.8em;
+  color: #000;
 }
 
 .titulo {
@@ -70,15 +47,23 @@ body {
   font-size: 0.85em;
   font-weight: 600;
   line-height: 1.2;
+  color: #000;
 }
 
 .titulo .sub {
   font-size: 0.9em;
   font-weight: 400;
   opacity: 0.85;
+  color: #000;
 }
 
-/* Tamaños de imágenes en escritorio */
+/* Subrayado solo al hover de .foto */
+.foto:hover .titulo,
+.foto:hover .fecha {
+  text-decoration: underline;
+}
+
+/* Tamaños imágenes */
 @media (min-width: 1060px) {
   .tam-180 img { max-width: 180px; }
   .tam-220 img { max-width: 220px; }
@@ -88,29 +73,7 @@ body {
   .tam-310 img { max-width: 310px; }
 }
 
-/* ===== Grid 4 columnas (1150–1289px) ===== */
-/* @media (min-width: 1150px) and (max-width: 1290px) {
-  .galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 15px;
-    height: auto;
-  }
-
-  .foto {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    opacity: 1;
-    transform: none;
-  }
-
-  .foto img { width: 100%; height: auto; }
-  .fecha { position: static; margin-bottom: 4px; }
-} */
-
-/* ===== Responsive Tablet / Móvil (<900px) ===== */
+/* Responsive */
 @media (max-width: 1060px) {
   .galeria {
     display: grid;
@@ -121,13 +84,11 @@ body {
     padding: 10px;
     overflow: visible;
   }
-
-  .foto {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
+  .foto { 
+    position: relative !important; 
+    top: auto !important; 
+    left: auto !important; 
   }
-
   .foto img { width: 100%; height: auto; max-width: 100%; }
   .fecha { position: static; margin-bottom: 4px; }
 }
