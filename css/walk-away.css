@@ -32,6 +32,12 @@
 
 
 /* ===== Galería Masonry ===== */
+.info{
+  top: 31px;
+  position: relative;
+  padding: 0px 20px;
+}
+
 .galeria {
   top: 39px;
   position: relative;
