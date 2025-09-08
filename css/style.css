@@ -1,4 +1,8 @@
 /* ===== MENÚ FIJO ===== */
+*{
+  font-family: "Roboto Mono", monospace;
+;
+}
 .top-bar {
   position:fixed;
   top: 0;
