@@ -3,6 +3,8 @@
   font-family: "Roboto Mono", monospace;
 ;
 }
+
+
 .top-bar {
   position:fixed;
   top: 0;
@@ -20,9 +22,6 @@
   text-decoration: none; /* sin subrayado */
 }
 
-.top-bar a:hover {
-  text-decoration: underline; /* solo al hover */
-}
 
 .top-buttons {
   display: flex;
@@ -34,6 +33,36 @@
   color: #000;
 }
 
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none;
+  box-shadow: none; /* quita cualquier recuadro extra */
+  border-color: #00000000 !important;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;  /* base */
+  width: 0;
+  height: 1.5px; /* grosor similar a underline */
+  background: #000;
+  transition: width 0.4s ease;
+  transform: translateY(-5px); /* 🔹 Ajusta la distancia como un underline normal */
+}
+
+.btn:hover::after {
+  width: 100%;
+}
 
 /* ===== Galería Masonry ===== */
 .galeria {
@@ -130,3 +159,5 @@
   .foto img { width: 100%; height: auto; max-width: 100%; }
   .fecha { position: static; margin-bottom: 4px; }
 }
+
+

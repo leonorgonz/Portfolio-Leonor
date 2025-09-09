@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <!-- ===== MENÚ FIJO SUPERIOR ===== -->
 <header class="top-bar">
   <div class="top-buttons">
@@ -24,7 +25,7 @@
   </div>
 
   <div class="logo">
-    <a href="index.html">LG</a>
+    <a href="index.html" class="btn">LG</a>
   </div>
 </header>
 
@@ -37,9 +38,7 @@
       <p>A social graphic campaign that raises awareness about mass deportation in the U.S. and questions current immigration policies. The campaign is designed for both social media and outdoor advertising, aiming to reach a wide audience and spark reflection in digital platforms as well as in public spaces.</p>
       <br>
       <p>Awarded with Silver Laus in the Advertising category for my project "Walk Away". Issued by 
-        <a href="https://adg-fad.org/laus/premios">
-          <span>ADG Laus 2025</span>
-        </a>
+        <a href="https://adg-fad.org/laus/premios"><span>ADG Laus 2025</span></a>
       </p>
   </div>
 </section>
@@ -47,18 +46,14 @@
 <!-- ===== BLOQUES BRIEFING Y PRODUCCIÓN EN DOS COLUMNAS ===== -->
 <section class="info-container">
   <div class="info-block">
-    <div class="sub">
-        <p>Briefing</p>
-    </div>
+    <div class="sub"><p>Briefing</p></div>
     <div class="texto">
         <p>Use urban signage as a visual metaphor for deportation, raising awareness about the forced expulsion of immigrants. The posters will be designed to create strong impact both on social media and in public spaces, encouraging reflection on immigration policies and the need for change.</p>
     </div>
   </div>
 
   <div class="info-block">
-    <div class="sub">
-        <p>Production</p>
-    </div>
+    <div class="sub"><p>Production</p></div>
     <div class="texto">
         <p>The campaign consists of three posters featuring edited photographs that modify urban signage. These visual interventions recreate common signs (such as traffic signs) to represent the deportation of immigrants in the U.S. It uses the typography and red card colors of the ILRC, ensuring visual coherence.</p>
     </div>
@@ -70,20 +65,26 @@
   <div class="responsive">
     <img src="img/bus laus 2.jpg" alt="Bus Laus">
   </div>
-
   <div class="responsive">
     <img src="img/billboard laus 3.jpg" alt="Billboard Laus">
   </div>
-
   <div class="responsive">
     <img src="img/movil laus 3.jpg" alt="Movil Laus">
   </div>
 </section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <img id="modalImg" class="modal-content">
+</div>
+
+<!-- ===== FOOTER ===== -->
 <footer class="copyright">
   &copy; 2025. Leonor González
 </footer>
 
 <!-- JAVASCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/walk-away.js"></script>
 </body>
 </html>
