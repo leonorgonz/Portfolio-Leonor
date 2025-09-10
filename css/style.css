@@ -158,6 +158,28 @@
   }
   .foto img { width: 100%; height: auto; max-width: 100%; }
   .fecha { position: static; margin-bottom: 4px; }
+  body > footer{
+  padding-bottom: 20px !important;
+  font-size: small;
+  font-weight: 600;
 }
-
+.copyright {
+  top: 120px;
+  position: relative;
+  padding: 0px 30px;
+  margin-bottom: 60px;
+}
+}
+body > footer{
+  font-size: small;
+  font-weight: 600;
+}
+.copyright {
+  position: relative;
+  padding: 0px 30px;
+  padding-top: 14px;
+}
+body > footer > a{
+  padding: 0 !important;
+}
 
