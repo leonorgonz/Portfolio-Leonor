@@ -1,12 +1,10 @@
 /* ===== MENÚ FIJO ===== */
-*{
+* {
   font-family: "Roboto Mono", monospace;
-;
 }
 
-
 .top-bar {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,7 +19,6 @@
 .top-bar a {
   text-decoration: none; /* sin subrayado */
 }
-
 
 .top-buttons {
   display: flex;
@@ -52,7 +49,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;  /* base */
+  bottom: 0; /* base */
   width: 0;
   height: 1.5px; /* grosor similar a underline */
   background: #000;
@@ -64,7 +61,7 @@
   width: 100%;
 }
 
-/* ===== Galería Masonry ===== */
+/* ===== Galería Masonry (Desktop con absolute) ===== */
 .galeria {
   top: 39px;
   position: relative;
@@ -72,21 +69,21 @@
   max-width: 1400px;
   margin: 0 auto;
   height: 95vh;
-  overflow: hidden;
+  overflow: visible; /* para que no corte imágenes */
 }
 
 .foto {
   position: absolute;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease, top 0.6s ease, left 0.6s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   color: #000;
   text-decoration: none; /* quitar subrayado por defecto */
 }
 
-.foto.visible { 
-  opacity: 1; 
-  transform: translateY(0); 
+.foto.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .foto img {
@@ -94,11 +91,12 @@
   width: 100%;
   height: auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  object-fit: cover;
 }
 
-.foto:hover img { 
-  transform: scale(0.98); 
-  opacity: 0.9; 
+.foto:hover img {
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 .fecha {
@@ -140,46 +138,63 @@
   .tam-310 img { max-width: 300px; }
 }
 
-/* Responsive */
+/* ===== Responsive (Mobile / Tablet con Masonry CSS) ===== */
 @media (max-width: 1060px) {
   .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-auto-rows: 5px;
-    gap: 5px;
-    height: auto;
+    grid-template-rows: masonry; /* Masonry nativo */
+    gap: 15px;
     padding: 10px;
+    height: auto;
     overflow: visible;
   }
+
   .foto { 
     position: relative !important; 
     top: auto !important; 
     left: auto !important; 
+    margin: 0 !important; 
+    transition: opacity 0.5s ease, transform 0.5s ease; /* quitamos top/left */
   }
-  .foto img { width: 100%; height: auto; max-width: 100%; }
-  .fecha { position: static; margin-bottom: 4px; }
-  body > footer{
-  padding-bottom: 20px !important;
+
+  .foto img { 
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+  }
+
+  .fecha { 
+    position: static; 
+    margin-bottom: 4px; 
+  }
+
+  body > footer {
+    padding-bottom: 20px !important;
+    font-size: small;
+    font-weight: 600;
+  }
+
+  .copyright {
+    top: 120px;
+    position: relative;
+    padding: 0px 30px;
+    margin-bottom: 60px;
+  }
+}
+
+/* ===== Footer ===== */
+body > footer {
   font-size: small;
   font-weight: 600;
 }
-.copyright {
-  top: 120px;
-  position: relative;
-  padding: 0px 30px;
-  margin-bottom: 60px;
-}
-}
-body > footer{
-  font-size: small;
-  font-weight: 600;
-}
+
 .copyright {
   position: relative;
   padding: 0px 30px;
   padding-top: 14px;
 }
-body > footer > a{
+
+body > footer > a {
   padding: 0 !important;
 }
-
